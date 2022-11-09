@@ -83,4 +83,5 @@ def manual_numerical_ascending_sort(list_to_be_sorted):
 
 number_list = [21, 45, 98, 61, 2]
 ascending_sort = manual_numerical_ascending_sort(number_list)  
-print(ascending_sort)         
+print(ascending_sort)
+#TC: O(n^2) bc there are two nested for loops so it could potentially run for len(argument)^2
