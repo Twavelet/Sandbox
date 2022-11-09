@@ -73,5 +73,14 @@ print(name_check)
 
 #4: Given a list of numbers, manually sort the list into ascending order (may not use built in .sort() method).
 
-def manual_numerical_ascending_sort():
-    pass
+def manual_numerical_ascending_sort(list_to_be_sorted):
+    list_length = len(list_to_be_sorted)-1
+    for first_index in range(list_length):
+        for second_index in range(list_length-1):
+            if list_to_be_sorted[second_index] < list_to_be_sorted[second_index+1]:
+                list_to_be_sorted[second_index], list_to_be_sorted[second_index+1] = list_to_be_sorted[second_index+1], list_to_be_sorted[second_index]
+    return list_to_be_sorted
+
+number_list = [21, 45, 98, 61, 2]
+ascending_sort = manual_numerical_ascending_sort(number_list)  
+print(ascending_sort)         
