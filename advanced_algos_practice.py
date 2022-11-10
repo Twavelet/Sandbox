@@ -17,10 +17,20 @@ def duplicate_characters(string_to_check):
             duplicates.update({pair: dict[pair]})
     print(duplicates)
 
-    
-    
-    
-
-
-
 duplicate_characters("oqiwhfujisbdckjvbzxiousdibsguirbgaaaaaaaaaa")
+
+#2: Create a function that reverses a string, utilizing recursion
+
+def reverse_string_with_recursion(string_to_reverse):
+    # reversed_string=""
+    # for neg in range(len(string_to_reverse) -1, -1, -1):
+    #     reversed_string += string_to_reverse[neg]
+    # print(reversed_string)
+    if string_to_reverse == "":
+        return string_to_reverse
+    else:
+        return string_to_reverse[-1] + reverse_string_with_recursion(string_to_reverse[:-1])
+        
+
+test = reverse_string_with_recursion("reverse")
+print(test)
