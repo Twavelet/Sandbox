@@ -11,7 +11,11 @@ def duplicate_characters(string_to_check):
     # print(sorted_string) 
     for char in string_to_check:
         dict.update({char: string_to_check.count(char)})
-    print(dict)
+    for pair in dict:
+        if dict[pair] > 1:
+            print(pair +": "+ str(dict[pair]))
+
+    
     
     
 
