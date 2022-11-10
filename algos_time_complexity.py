@@ -65,7 +65,7 @@ def check_for_repeated_names(list_of_names):
         
         
 
-names = ['ted', "AbbY", "lOu", "bri", "Sam", "abby"]
+names = ['ted', "Ann", "lOu", "bri", "Sam", "anN"]
 name_check = check_for_repeated_names(names)
 print(name_check)
 #TC: O(n log n) bc dividing the problem into sub parts  - first using a for loop to lowercase all list names before sorting them alphabetically
