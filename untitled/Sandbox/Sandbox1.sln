@@ -1,0 +1,13 @@
+﻿using System;
+
+public class Class1
+{
+	public Class1()
+	{
+		Console.WriteLine("How many hours did you work? ");
+		string hours = Console.ReadLine();
+		int intHours = (Int32.Parse(hours);
+		Console.WriteLine(intHours);
+
+	}
+}
