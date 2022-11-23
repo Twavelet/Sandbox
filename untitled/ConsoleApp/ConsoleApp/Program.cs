@@ -57,7 +57,6 @@ do
     else if (fibonacci.Count >= 3)
     {
         fibonacci.Add(fibonacci[fibonacci.Count - 1] + fibonacci[fibonacci.Count - 2]);
-        Console.WriteLine(fibonacci[fibonacci.Count-1]);
     }
 }
 while (fibonacci.Count <= 20);
