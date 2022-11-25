@@ -9,7 +9,19 @@ namespace Bank
     internal class BankAccount
     {
         //properties/characteristics (what a bank account has) and what they can do -- "get" == get them & "set" means you cna set them later on
-        public string Number { get; }
+        public string Number { 
+            get {
+                Random random = new Random();
+                var acctNumber = new StringBuilder();
+                for(int i = 0; i < 10; i++)
+                {
+                    acctNumber.Append(random.Next(0, 9));
+                    
+                }
+                return acctNumber.ToString();
+                
+            } 
+        }
         public string Owner { get; set; }
         public decimal Balance { 
             get {
@@ -30,8 +42,6 @@ namespace Bank
         {
             this.Owner = name;
             MakeDeposit(initialBalance, DateTime.Now, "Initial deposit");
-            this.Number = accountNumberSeed.ToString();
-            accountNumberSeed++;
 
         }
 
@@ -63,6 +73,16 @@ namespace Bank
             transactionList.Add(withdrawal);
             
         }
+        public string GetAccountHistory()
+        {
+            var transactionReport = new StringBuilder();
 
+            transactionReport.AppendLine("Date\t\tAmount\t\tNote");
+            foreach (var transaction in transactionList)
+            {
+                transactionReport.AppendLine($"{transaction.Date.ToShortDateString()}\t${transaction.Amount}\t\t{transaction.Note}");
+            }
+            return transactionReport.ToString();
+        }
     }
 }
