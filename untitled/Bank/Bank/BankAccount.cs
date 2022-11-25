@@ -9,16 +9,16 @@ namespace Bank
     internal class BankAccount
     {
         //properties/characteristics (what a bank account has) and what they can do -- "get" == get them & "set" means you cna set them later on
-        public string Number { 
+        public string accountNumber { 
             get {
                 Random random = new Random();
-                var acctNumber = new StringBuilder();
-                for(int i = 0; i < 10; i++)
+                var generateAcctNumber = new StringBuilder();
+                for(int i = 0; i < 7; i++)
                 {
-                    acctNumber.Append(random.Next(0, 9));
+                    generateAcctNumber.Append(random.Next(0, 9));
                     
                 }
-                return acctNumber.ToString();
+                return generateAcctNumber.ToString();
                 
             } 
         }
@@ -34,7 +34,6 @@ namespace Bank
             }
         }
 
-        private int accountNumberSeed = 123456;
 
         private List<Transaction> transactionList = new List<Transaction>();
 
